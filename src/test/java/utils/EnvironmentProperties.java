@@ -1,4 +1,4 @@
-package metodos;
+package utils;
 
 import java.util.Properties;
 
@@ -14,7 +14,7 @@ public class EnvironmentProperties {
 		return Environment.getByName(envirommentName).getProp(value);
 	}
 
-	public static int getInt(String property) throws InvalidEnvironmentPropertyException{
+	public static int getInt(String property) throws InvalidEnvironmentPropertyException {
 		String environmentName = System.getProperty("enviromment");
 
 		try{

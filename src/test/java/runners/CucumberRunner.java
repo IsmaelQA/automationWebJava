@@ -1,4 +1,4 @@
-package runner;
+package runners;
 
 import java.net.MalformedURLException;
 
@@ -16,8 +16,9 @@ import metodos.Base;
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
         dryRun = false, 
-        features = "src/test/resources/features/",
-        glue = {"steps"})
+        features = "src/test/resources/features",
+        glue = "steps"
+)
 
 public class CucumberRunner {
 	 protected static WebDriver driver;
